@@ -1,0 +1,26 @@
+<div class="body">
+
+<button class="btn btn-outline-warning" (click)="open(content)">Join WWN Network</button>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Join Our Network</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+        <div class="mb-3">
+            <label for="musername" class="form-label">Medium User Name</label>
+            <input type="text" class="form-control" id="musername" placeholder="@amitkumardube"
+            [(ngModel)]="mediumHandle" name="musername">
+        </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Join</button>
+  </div>
+</ng-template>
+
+</div>
